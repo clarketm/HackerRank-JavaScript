@@ -7,7 +7,7 @@
  */
 
 function hourglassSum(arr) {
-  let max = -Number.MAX_VALUE;
+  let max = Number.MIN_SAFE_INTEGER;
 
   for (let i = 0; i < arr.length - 2; i++) {
     for (let j = 0; j < arr[i].length - 2; j++) {
@@ -21,14 +21,14 @@ function hourglassSum(arr) {
 
 // Test
 if (require.main === module) {
-  // console.log(hourglassSum([
-  //   [1, 1, 1, 0, 0, 0],
-  //   [0, 1, 0, 0, 0, 0],
-  //   [1, 1, 1, 0, 0, 0],
-  //   [0, 9, 2, -4, -4, 0],
-  //   [0, 0, 0, -2, 0, 0],
-  //   [0, 0, -1, -2, -4, 0]
-  // ])); // 13
+  console.log(hourglassSum([
+    [1, 1, 1, 0, 0, 0],
+    [0, 1, 0, 0, 0, 0],
+    [1, 1, 1, 0, 0, 0],
+    [0, 9, 2, -4, -4, 0],
+    [0, 0, 0, -2, 0, 0],
+    [0, 0, -1, -2, -4, 0]
+  ])); // 13
 
   console.log(hourglassSum([
     [-1, 1, -1, 0, 0, 0],
